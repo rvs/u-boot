@@ -36,11 +36,12 @@ COBJS	= main.o ACEX1K.o altera.o bedbug.o circbuf.o \
 	  cmd_fat.o cmd_fdc.o cmd_fdos.o cmd_flash.o cmd_fpga.o \
 	  cmd_i2c.o cmd_ide.o cmd_immap.o cmd_itest.o cmd_jffs2.o \
 	  cmd_load.o cmd_log.o \
+	  cmd_httpd.o \
 	  cmd_mem.o cmd_mii.o cmd_misc.o cmd_mmc.o \
 	  cmd_nand.o cmd_net.o cmd_nvedit.o \
 	  cmd_pci.o cmd_pcmcia.o cmd_portio.o \
 	  cmd_reginfo.o cmd_reiser.o cmd_scsi.o cmd_spi.o cmd_universe.o \
-	  cmd_usb.o cmd_vfd.o \
+	  cmd_usb.o cmd_vfd.o cmd_ethreg.o\
 	  command.o console.o devices.o dlmalloc.o docecc.o \
 	  environment.o env_common.o \
 	  env_nand.o env_dataflash.o env_flash.o env_eeprom.o \

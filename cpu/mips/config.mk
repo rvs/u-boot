@@ -22,7 +22,7 @@
 #
 v=$(shell \
 mips-linux-as --version|grep "GNU assembler"|awk '{print $$3}'|awk -F . '{print $$2}')
-MIPSFLAGS=$(shell \
+#MIPSFLAGS=$(shell \
 if [ "$v" -lt "14" ]; then \
 	echo "-mcpu=4kc"; \
 else \
@@ -31,10 +31,10 @@ fi)
 
 ifneq (,$(findstring 4KCle,$(CROSS_COMPILE)))
 ENDIANNESS = -EL
-else
-ENDIANNESS = -EB
+#else
+#ENDIANNESS = -EB
 endif
 
-MIPSFLAGS += $(ENDIANNESS) -mabicalls
+MIPSFLAGS += $(ENDIANNESS) -mabicalls -march=mips32r2
 
 PLATFORM_CPPFLAGS += $(MIPSFLAGS)
